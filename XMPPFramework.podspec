@@ -373,7 +373,6 @@ s.subspec 'All' do |ss|
   ss.dependency 'XMPPFramework/XEP-0333'
   ss.dependency 'XMPPFramework/XEP-0335'
   ss.dependency 'XMPPFramework/XEP-0352'
-  ss.dependency 'XMPPFramework/XEP-0357'
 
 end
 end
