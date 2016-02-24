@@ -45,15 +45,8 @@ s.subspec 'Core' do |core|
   core.source_files = ['XMPPFramework.h', 'Core/**/*.{h,m}', 'Vendor/libidn/*.h', 'Authentication/**/*.{h,m}', 'Categories/**/*.{h,m}', 'Utilities/**/*.{h,m}']
   core.vendored_libraries = 'Vendor/libidn/libidn.a'
   core.libraries = 'xml2', 'resolv'
-  core.ios.xcconfig = {
+  core.xcconfig = {
     'HEADER_SEARCH_PATHS' => '$(inherited) $(SDKROOT)/usr/include/libxml2 $(PODS_ROOT)/KissXML/libxml $(SDKROOT)/usr/include/libresolv',
-    'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/XMPPFramework/Vendor/libidn"',
-    'OTHER_LDFLAGS' => '"-lxml2"', 'ENABLE_BITCODE' => 'NO',
-    'OTHER_CFLAGS' => "$(inherited) -DDDXML_LIBXML_MODULE_ENABLED=1",
-    'OTHER_SWIFT_FLAGS' => "$(inherited) -DDDXML_LIBXML_MODULE_ENABLED"
-  }
-  core.osx.xcconfig = {
-    'HEADER_SEARCH_PATHS' => '$(inherited) $(SDKROOT)/usr/include/libxml2 $(SDKROOT)/usr/include/libresolv',
     'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/XMPPFramework/Vendor/libidn"',
     'OTHER_LDFLAGS' => '"-lxml2"', 'ENABLE_BITCODE' => 'NO',
     'OTHER_CFLAGS' => "$(inherited) -DDDXML_LIBXML_MODULE_ENABLED=1",
@@ -61,7 +54,7 @@ s.subspec 'Core' do |core|
   }
   core.dependency 'CocoaLumberjack','~>2.0'
   core.dependency 'CocoaAsyncSocket','~>7.4.1'
-  core.ios.dependency 'KissXML/libxml_module', '~> 5.0.3'
+  core.dependency 'KissXML/libxml_module', '~> 5.0.3'
 end
 
 s.subspec 'BandwidthMonitor' do |ss|
