@@ -51,7 +51,7 @@ s.subspec 'Core' do |core|
     'OTHER_LDFLAGS' => '"-lxml2"', 'ENABLE_BITCODE' => 'NO',
     'OTHER_CFLAGS' => "$(inherited) -DDDXML_LIBXML_MODULE_ENABLED=1",
     'OTHER_SWIFT_FLAGS' => "$(inherited) -DDDXML_LIBXML_MODULE_ENABLED"
-  }
+}
   core.dependency 'CocoaLumberjack','~>2.0'
   core.dependency 'CocoaAsyncSocket','~>7.4.1'
   core.dependency 'KissXML/libxml_module', '~> 5.0.3'
@@ -373,6 +373,7 @@ s.subspec 'All' do |ss|
   ss.dependency 'XMPPFramework/XEP-0333'
   ss.dependency 'XMPPFramework/XEP-0335'
   ss.dependency 'XMPPFramework/XEP-0352'
+  ss.ios.dependency 'XMPPFramework/XEP-0357'
 
 end
 end
