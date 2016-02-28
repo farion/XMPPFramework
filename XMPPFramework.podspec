@@ -5,8 +5,7 @@ s.version = '3.6.7'
 s.osx.deployment_target = '10.7'
 s.ios.deployment_target = '6.0'
 
-s.osx.platform = :osx, '10.7'
-s.ios.platform = :ios, '6.0'
+s.platform = 
 
 s.ios.frameworks = 'UIKit', 'Foundation'
 s.osx.frameworks = 'Cocoa'
