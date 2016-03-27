@@ -302,13 +302,6 @@ ss.dependency 'XMPPFramework/Core'
 ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
 end
 
-s.subspec 'XEP-0313' do |ss|
-ss.source_files = 'Extensions/XEP-0313/**/*.{h,m}'
-ss.dependency 'XMPPFramework/Core'
-ss.dependency 'XMPPFramework/XEP-0136'
-ss.prefix_header_contents = "#define HAVE_XMPP_SUBSPEC_#{name.upcase.sub('-', '_')}"
-end
-
 s.subspec 'XEP-0333' do |ss|
 ss.source_files = 'Extensions/XEP-0333/**/*.{h,m}'
 ss.dependency 'XMPPFramework/Core'
@@ -374,7 +367,6 @@ s.subspec 'All' do |ss|
   ss.dependency 'XMPPFramework/XEP-0280'
   ss.dependency 'XMPPFramework/XEP-0297'
   ss.dependency 'XMPPFramework/XEP-0308'
-  ss.dependency 'XMPPFramework/XEP-0313'
   ss.dependency 'XMPPFramework/XEP-0333'
   ss.dependency 'XMPPFramework/XEP-0335'
   ss.dependency 'XMPPFramework/XEP-0352'
